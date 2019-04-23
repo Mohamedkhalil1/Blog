@@ -50,7 +50,7 @@ class Session
      *  */
     public function start()
     {
-        init_set_('session.use_only_cookies' , 1);
+        ini_set('session.use_only_cookies' , 1);
         if(! session_id())
         {
             session_start();

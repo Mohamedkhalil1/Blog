@@ -3,20 +3,20 @@
 namespace System;
 class File
 {
-
     /*
     * Directory Separator
      *
      * @Const string
     */
+    const DS = DIRECTORY_SEPARATOR;   // DIRECTORY_SEPARATOR = '/'
 
-    const DS = DIRECTORY_SEPARATOR;
+
     /*
      * Root Path
      *
      * @var String
      * */
-    private $root;
+    private $root;    // Path
 
     /*
      * Constructor
@@ -25,8 +25,15 @@ class File
     */
     public function __construct($root)
     {
-        $this->root =$root;
+        $this->root =$root;  // __DIR__
     }
+
+    /*
+      * Determine wether the given file path exist
+      *
+      * @param string $file
+      * @return bool
+   */
 
     public function exists($file)
     {
@@ -42,7 +49,7 @@ class File
 
     public function require($file)
     {
-        require $file;
+        require $file;        // return the path
     }
 
     /*
